@@ -1,33 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react"
+import { AnimatePresence, motion, useCycle } from "framer-motion"
+
+const links = [
+  { name: "Home", to: "#", id: 1 },
+  { name: "Temperature", to: "#", id: 2 },
+  { name: "Carbon Dioxide", to: "#", id: 3 },
+  { name: "Methane", to: "#", id: 4 },
+  { name: "Nitrous Oxide", to: "#", id: 5 },
+  { name: "Polar Ice", to: "#", id: 6 },
+]
+
+const itemVariants = {
+  closed: {
+    opacity: 0,
+  },
+  open: {
+    opacity: 1,
+  },
+}
+
+const sideVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [open, cycleOpen] = useCycle(false, true)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main>
+        <AnimatePresence>
+          {open && (
+            <motion.aside
+              initial={{ width: 0 }}
+              animate={{ width: 300 }}
+              exit={{
+                width: 0,
+                transition: { delay: 0.7, duration: 0.3 },
+              }}
+            >
+              <motion.div className="container" initial="closed" animate="open" exit="closed" variants={sideVariants}>
+                {links.map(({ name, to, id }) => (
+                  <motion.a key={id} href={to} variants={itemVariants}>
+                    {name}
+                  </motion.a>
+                ))}
+              </motion.div>
+            </motion.aside>
+          )}
+        </AnimatePresence>
+        <div className="btn-container">
+          <button onClick={cycleOpen}>{open ? "Close" : "Open"}</button>
+        </div>
+      </main>
     </>
   )
 }

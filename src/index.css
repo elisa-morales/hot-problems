@@ -1,24 +1,18 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Karla", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -26,7 +20,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+
   min-width: 320px;
   min-height: 100vh;
 }
@@ -36,7 +30,44 @@ h1 {
   line-height: 1.1;
 }
 
+/*----- SIDEBAR -----*/
+
+main {
+  display: flex;
+}
+
+aside {
+  background-color: #c4a8ff;
+  width: 18.75rem;
+  height: 100vh;
+}
+
+.container {
+  margin: 4.5rem 1.4rem;
+}
+
+.btn-container {
+  position: fixed;
+}
+
+.container a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 600;
+  display: block;
+  margin: 20px;
+}
+
 button {
+  cursor: pointer;
+  margin: 1.25rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  background-color: #f9fafb;
+}
+
+/*button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -53,17 +84,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
+}*/
