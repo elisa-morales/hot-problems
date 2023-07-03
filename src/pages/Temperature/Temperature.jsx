@@ -4,7 +4,6 @@ const Temperature = () => {
   return (
     <div className="container">
       <Sidebar />
-      <div className="dashboard">m</div>
     </div>
   )
 }

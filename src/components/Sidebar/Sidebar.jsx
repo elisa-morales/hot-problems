@@ -1,5 +1,7 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import { AnimatePresence, motion, useCycle } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
+import "./Sidebar.css"
 
 const links = [
   { name: "Home", url: "/", id: 1 },
@@ -36,7 +38,7 @@ const sideVariants = {
 
 const Sidebar = () => {
   const defaultValue = window.innerWidth > 768 ? true : false
-  const [open, cycleOpen] = useCycle(defaultValue, !defaultValue)
+  const [open, setOpen] = useState(defaultValue)
 
   return (
     <>
@@ -62,7 +64,7 @@ const Sidebar = () => {
           )}
         </AnimatePresence>
         <div className="btn-container">
-          <button onClick={cycleOpen}>{open ? "Close" : "Open"}</button>
+          <button onClick={() => setOpen(!open)}>{open ? "Close" : "Open"}</button>
         </div>
       </div>
     </>
