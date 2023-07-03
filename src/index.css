@@ -2,6 +2,12 @@
   font-family: "Karla", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  height: 100vh;
+}
+
+.prova {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 a {
@@ -15,37 +21,21 @@ a:hover {
 body {
   margin: 0;
   min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
   text-align: center;
-}
-
-.container {
-  display: flex;
-  gap: 2rem;
-}
-
-.dashboard {
-  flex-grow: 2;
-  margin: 4rem 2rem 0 0;
-  background-color: #535bf2;
-  height: 100vh;
 }
 
 /*----- SIDEBAR -----*/
 
-main {
+.sidebar {
   display: flex;
+  height: 100vh;
 }
 
 aside {
   background-color: #c4a8ff;
-  width: 18.75rem;
-  height: 100vh;
 }
 
 .menu-container {
@@ -54,7 +44,6 @@ aside {
 
 .menu-container a {
   color: #f9fafb;
-  font-size: 1.75rem;
   font-weight: 600;
   display: block;
   margin: 20px;
@@ -77,36 +66,20 @@ button {
   position: fixed;
 }
 
-/*button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}*/
-
 @media screen and (max-width: 768px) {
-  .container {
-    display: block;
-  }
-
-  main {
+  .sidebar {
     position: absolute;
     top: 0;
   }
+}
 
-  .dashboard {
-    margin: 2rem;
+@media screen and (min-width: 769px) {
+  .container-dash {
+    display: grid;
+    grid-template-columns: 240px 80%;
+  }
+
+  .btn-container {
+    display: none;
   }
 }

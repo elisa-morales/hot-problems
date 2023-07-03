@@ -1,18 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Home from "./pages/Home/Home"
+import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom"
+import Home, { loader as dashboardLoader } from "./pages/Home/Home"
 import Temperature from "./pages/Temperature/Temperature"
 
+const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<Home />} loader={dashboardLoader} />))
+
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/temperature" element={<Temperature />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
+
+// <Route path="/temperature" element={<Temperature />} />
