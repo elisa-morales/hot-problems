@@ -1,8 +1,18 @@
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from "react-router-dom"
-import Home from "./pages/Home/Home"
-import Temperature from "./pages/Temperature/Temperature"
+import clientApi from "./services/clientApi"
+import Layout from "./components/Layout/Layout"
+import Home from "./pages/Home"
+import Section from "./pages/Section"
 
-const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<Home />} />))
+const loader = async ({ params }) => {
+  return clientApi(params.id)
+}
+
+const router = createBrowserRouter(createRoutesFromElements(
+  <Route element={<Layout />}>
+<Route path="/" element={<Home />} />
+<Route path="/:id" element={<Section />} loader={loader} />
+</Route>))
 
 function App() {
   return <RouterProvider router={router} />

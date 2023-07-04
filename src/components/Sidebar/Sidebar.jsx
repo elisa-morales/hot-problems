@@ -1,16 +1,21 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 import "./Sidebar.css"
 
 const links = [
   { name: "Home", url: "/", id: 1 },
   { name: "Temperature", url: "/temperature", id: 2 },
-  { name: "Carbon Dioxide", url: "#", id: 3 },
-  { name: "Methane", url: "#", id: 4 },
-  { name: "Nitrous Oxide", url: "#", id: 5 },
-  { name: "Polar Ice", url: "#", id: 6 },
+  { name: "Carbon Dioxide", url: "/co2", id: 3 },
+  { name: "Methane", url: "/methane", id: 4 },
+  { name: "Nitrous Oxide", url: "/nitrous-oxide", id: 5 },
+  { name: "Polar Ice", url: "/arctic", id: 6 },
 ]
+
+const activeStyle = {
+  textDecoration: "underline",
+  color: "#535bf2",
+}
 
 const itemVariants = {
   closed: {
@@ -55,16 +60,17 @@ const Sidebar = () => {
             >
               <motion.div className="menu-container" initial="closed" animate="open" exit="closed" variants={sideVariants}>
                 {links.map(({ name, url, id }) => (
-                  <Link to={url} key={id}>
+                  <NavLink to={url} key={id}
+                  style={({isActive}) => isActive ? activeStyle : null }>
                     <motion.div variants={itemVariants}>{name}</motion.div>
-                  </Link>
+                  </NavLink>
                 ))}
               </motion.div>
             </motion.aside>
           )}
         </AnimatePresence>
         <div className="btn-container">
-          <button onClick={() => setOpen(!open)}>{open ? "Close" : "Open"}</button>
+          <button onClick={() => setOpen(!open)}>{open ? <i className='bx bx-x' ></i> : <i className='bx bx-menu'></i>}</button>
         </div>
       </div>
     </>

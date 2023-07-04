@@ -1,0 +1,12 @@
+.chart {
+  margin-top: 50px;
+}
+
+
+@media screen and (min-width: 769px) {
+  .chart {
+    max-width: 90%;
+    max-height: 90%;
+    margin: 10px auto;
+  }
+}
