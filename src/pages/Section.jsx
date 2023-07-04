@@ -1,14 +1,25 @@
-import { Suspense } from "react"
+import { Suspense, lazy } from "react"
 import { Await, useLoaderData, useParams } from "react-router-dom"
-import LineChart from "../components/LineChart/LineChart"
+import ClipLoader from "react-spinners/ClipLoader"
+const LineChart = lazy(() => import("../components/LineChart/LineChart"))
 
 const Section = () => {
   const { id } = useParams()
   const { data } = useLoaderData()
 
+  const override = {
+    position: "fixed",
+    top: "50%",
+    left: "50%"
+  }
+
   return (
-    <>
-      <Suspense fallback={<p>Loading...</p>}>
+  
+      <Suspense fallback={<ClipLoader
+        color="#324a24"
+        cssOverride={override}
+      />}>
+
       <Await resolve={data} errorElement="errore bla">
       {data => 
       <LineChart 
@@ -20,7 +31,7 @@ const Section = () => {
       />}
       </Await>
       </Suspense>
-    </>
+
   )
 }
 

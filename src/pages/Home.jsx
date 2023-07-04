@@ -1,6 +1,3 @@
-
-import Sidebar from "../components/Sidebar/Sidebar"
-
 const Home = () => {
   return (
       <div className="da applicare nel component">
