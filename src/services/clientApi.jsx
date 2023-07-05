@@ -7,7 +7,7 @@ const clientApi = async (id) => {
     const response = await axios.get(`${id}-api`)
     return response
   } catch (error) {
-    console.log(`Something went wrong: ${error}`)
+    console.log(error)
   }
 }
 

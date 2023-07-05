@@ -1,11 +1,22 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
   font-family: "Karla", Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  height: 100vh;
   --primary: #c4a8ff;
   --light: #f9fafb;
-  --hover:  #535bf2;
+  --hover: #535bf2;
 }
 
 a {
@@ -17,10 +28,23 @@ a:hover {
 }
 
 body {
-  margin: 0;
   min-width: 320px;
 }
 
 h1 {
   text-align: center;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  margin: 3.25em auto;
+}
+
+@media screen and (min-width: 769px) {
+  .section-wrapper {
+    max-width: 1000px;
+    height: max-content;
+  }
 }

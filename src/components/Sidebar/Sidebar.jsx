@@ -27,12 +27,6 @@ const itemVariants = {
 }
 
 const sideVariants = {
-  closed: {
-    transition: {
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-    },
-  },
   open: {
     transition: {
       staggerChildren: 0.2,
@@ -55,13 +49,12 @@ const Sidebar = () => {
               animate={{ width: 240 }}
               exit={{
                 width: 0,
-                transition: { delay: 0.8, duration: 0.3 },
+                transition: { delay: 0.3, duration: 0.3 },
               }}
             >
               <motion.div className="menu-container" initial="closed" animate="open" exit="closed" variants={sideVariants}>
                 {links.map(({ name, url, id }) => (
-                  <NavLink to={url} key={id}
-                  style={({isActive}) => isActive ? activeStyle : null }>
+                  <NavLink to={url} key={id} style={({ isActive }) => (isActive ? activeStyle : null)}>
                     <motion.div variants={itemVariants}>{name}</motion.div>
                   </NavLink>
                 ))}
@@ -70,7 +63,7 @@ const Sidebar = () => {
           )}
         </AnimatePresence>
         <div className="btn-container">
-          <button onClick={() => setOpen(!open)}>{open ? <i className='bx bx-x' ></i> : <i className='bx bx-menu'></i>}</button>
+          <button onClick={() => setOpen(!open)}>{open ? <i className="bx bx-x"></i> : <i className="bx bx-menu"></i>}</button>
         </div>
       </div>
     </>
