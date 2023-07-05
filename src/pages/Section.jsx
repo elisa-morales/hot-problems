@@ -1,8 +1,8 @@
 import { Suspense, lazy } from "react"
 import { Await, useLoaderData, useParams } from "react-router-dom"
 import ClipLoader from "react-spinners/ClipLoader"
-const LineChart = lazy(() => import("../components/LineChart/LineChart"))
 import Paragraph from "../components/Paragraph/Paragraph"
+const LineChart = lazy(() => import("../components/LineChart/LineChart"))
 
 const Section = () => {
   const { id } = useParams()
@@ -15,7 +15,7 @@ const Section = () => {
   }
 
   return (
-    <div className="section-wrapper">
+    <div className="page-wrapper">
       <Paragraph key={id} id={id} />
       <Suspense fallback={<ClipLoader color="#324a24" cssOverride={override} />}>
         <Await resolve={data} errorElement="errore bla">

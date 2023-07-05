@@ -27,6 +27,12 @@ const itemVariants = {
 }
 
 const sideVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
   open: {
     transition: {
       staggerChildren: 0.2,
@@ -49,7 +55,7 @@ const Sidebar = () => {
               animate={{ width: 240 }}
               exit={{
                 width: 0,
-                transition: { delay: 0.3, duration: 0.3 },
+                transition: { delay: 0.8, duration: 0.3 },
               }}
             >
               <motion.div className="menu-container" initial="closed" animate="open" exit="closed" variants={sideVariants}>

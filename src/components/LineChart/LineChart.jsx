@@ -18,8 +18,8 @@ export const options = {
     legend: {
       position: "top",
       labels: {
-        boxWidth: 6,
-        boxHeight: 6,
+        boxWidth: 10,
+        boxHeight: 2,
       },
     },
   },
