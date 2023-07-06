@@ -1,6 +1,7 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import { NavLink } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
+import useOutsideClick from "../../hooks/useOutsideClick"
 import "./Sidebar.css"
 
 const links = [
@@ -27,12 +28,6 @@ const itemVariants = {
 }
 
 const sideVariants = {
-  closed: {
-    transition: {
-      staggerChildren: 0.1,
-      staggerDirection: -1,
-    },
-  },
   open: {
     transition: {
       staggerChildren: 0.2,
@@ -44,10 +39,17 @@ const sideVariants = {
 const Sidebar = () => {
   const defaultValue = window.innerWidth > 768 ? true : false
   const [open, setOpen] = useState(defaultValue)
+  const ref = useRef()
+
+  useOutsideClick(ref, () => {
+    if (window.innerWidth < 769) {
+      setOpen(false)
+    }
+  })
 
   return (
     <>
-      <div className="sidebar">
+      <div className="sidebar" ref={ref}>
         <AnimatePresence>
           {open && (
             <motion.aside
@@ -55,7 +57,7 @@ const Sidebar = () => {
               animate={{ width: 240 }}
               exit={{
                 width: 0,
-                transition: { delay: 0.8, duration: 0.3 },
+                transition: { duration: 0.2 },
               }}
             >
               <motion.div className="menu-container" initial="closed" animate="open" exit="closed" variants={sideVariants}>
