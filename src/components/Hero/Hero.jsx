@@ -7,11 +7,12 @@ const Hero = () => {
     <div className="hero-container">
       <div className="heading content">
         <h2>
-          Girls are hot, guys are hot.
+          Girls are hot.
+          <br />
+          Guys are hot.
           <br />
           <span>Why is everyone so hot?</span>
         </h2>
-        <br />
         <br />
         <h2>🔥 Global warming 🔥</h2>
       </div>
