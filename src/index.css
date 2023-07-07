@@ -18,6 +18,7 @@
   --primary: #034a63;
   --accent: #dd7d3b;
   --light: #f8fcfc;
+  --lightAccent: #ffebda;
   --hover: #aacddf;
   --shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
 }
@@ -40,6 +41,7 @@ h1 {
 }
 
 .error-content {
+  height: 100vh;
   margin-top: 10em;
   text-align: center;
 }
@@ -66,7 +68,7 @@ h1 {
 .page-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: fit-content;
+  gap: 1em;
   padding: 0 1em;
   margin: 3.25em auto;
 }

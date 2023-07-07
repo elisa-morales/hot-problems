@@ -1,6 +1,9 @@
 .credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 400px;
-  background-color: #ffebda;
+  background-color: var(--lightAccent);
   border-radius: 0.5rem;
   box-shadow: var(--shadow);
   padding: 2em;

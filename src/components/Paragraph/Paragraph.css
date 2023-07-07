@@ -1,6 +1,14 @@
+.paragraph-container {
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding: 2em;
+}
+
 .title {
+  color: var(--primary);
   text-align: center;
-  margin-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .text {
