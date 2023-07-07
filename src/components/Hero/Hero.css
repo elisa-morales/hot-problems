@@ -1,6 +1,6 @@
 .hero-container {
   display: grid;
-  padding: 1em;
+  margin-top: 1em;
   gap: 2em;
 }
 
@@ -39,6 +39,6 @@ span {
 @media screen and (min-width: 769px) {
   .hero-container {
     grid-template-columns: repeat(2, 1fr);
-    margin: 5% 0;
+    margin: 5%;
   }
 }
