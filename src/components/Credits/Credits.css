@@ -1,0 +1,29 @@
+.credits {
+  max-width: 400px;
+  background-color: #ffebda;
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding: 2em;
+}
+
+.credits h2 {
+  padding-bottom: 0.5em;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+
+.credits a {
+  color: var(--accent);
+}
+
+.credits a:hover {
+  color: var(--primary);
+}
+
+.credits .bx {
+  font-size: 1.2rem;
+}

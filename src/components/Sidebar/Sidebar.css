@@ -36,7 +36,8 @@ aside {
   cursor: pointer;
 }
 
-.bx {
+.bx-x,
+.bx-menu {
   font-size: 1.5rem;
   transition: all 1s ease-out;
 }

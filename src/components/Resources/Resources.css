@@ -1,0 +1,17 @@
+ul {
+  list-style: circle inside;
+}
+
+.resources h2 {
+  color: var(--primary);
+  padding-bottom: 0.5em;
+}
+
+.resources a {
+  color: var(--accent);
+  line-height: 2;
+}
+
+.resources a:hover {
+  color: var(--primary);
+}
