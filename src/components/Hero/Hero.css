@@ -1,0 +1,44 @@
+.hero-container {
+  display: grid;
+  gap: 2em;
+  margin-top: 5%;
+}
+
+p {
+  text-align: justify;
+}
+
+.content {
+  max-width: 400px;
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  box-shadow: var(--shadow);
+  padding: 2em;
+}
+
+.heading {
+  background-color: var(--hover);
+  color: var(--primary);
+}
+
+.heading span {
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+  color: var(--primary);
+}
+
+@media screen and (max-width: 400px) {
+  .heading h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10% 1em 1em;
+  }
+}

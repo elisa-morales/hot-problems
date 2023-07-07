@@ -24,7 +24,3 @@ function App() {
 }
 
 export default App
-
-// <Route path="/temperature" element={<Temperature />} />
-
-// const router = createBrowserRouter(createRoutesFromElements(<Route path="/" element={<Home />} loader={dashboardLoader} />))

@@ -14,8 +14,7 @@ const links = [
 ]
 
 const activeStyle = {
-  textDecoration: "underline",
-  color: "#535bf2",
+  color: "#aacddf",
 }
 
 const itemVariants = {
