@@ -59,9 +59,19 @@ const Sidebar = () => {
                 transition: { duration: 0.2 },
               }}
             >
-              <motion.div className="menu-container" initial="closed" animate="open" exit="closed" variants={sideVariants}>
+              <motion.div
+                className="menu-container"
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={sideVariants}
+              >
                 {links.map(({ name, url, id }) => (
-                  <NavLink to={url} key={id} style={({ isActive }) => (isActive ? activeStyle : null)}>
+                  <NavLink
+                    to={url}
+                    key={id}
+                    style={({ isActive }) => (isActive ? activeStyle : null)}
+                  >
                     <motion.div variants={itemVariants}>{name}</motion.div>
                   </NavLink>
                 ))}
@@ -70,7 +80,13 @@ const Sidebar = () => {
           )}
         </AnimatePresence>
         <div className="btn-container">
-          <button onClick={() => setOpen(!open)}>{open ? <i className="bx bx-x"></i> : <i className="bx bx-menu"></i>}</button>
+          <button onClick={() => setOpen(!open)}>
+            {open ? (
+              <i className="bx bx-x"></i>
+            ) : (
+              <i className="bx bx-menu"></i>
+            )}
+          </button>
         </div>
       </div>
     </>

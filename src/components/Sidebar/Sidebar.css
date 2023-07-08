@@ -1,11 +1,11 @@
 .sidebar {
   display: flex;
-
   margin-bottom: -5%;
 }
 
 aside {
   min-width: 240px;
+  height: 100%;
   background-color: var(--primary);
 }
 
@@ -26,7 +26,7 @@ aside {
 .btn-container button {
   display: flex;
   align-items: center;
-  margin: 1.25em;
+  margin: 1.25em 0.5em;
   border: none;
   border-radius: 100%;
   padding: 0.25em;
@@ -43,13 +43,14 @@ aside {
   transition: all 1s ease-out;
 }
 
-.btn-container {
-  position: fixed;
-}
-
 @media screen and (max-width: 768px) {
   .sidebar {
     position: absolute;
     top: 0;
+  }
+
+  aside,
+  .btn-container {
+    position: fixed;
   }
 }
