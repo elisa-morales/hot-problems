@@ -51,7 +51,7 @@ h1 {
   color: var(--light);
   font-family: "Karla", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  padding: 1rem;
+  padding: 1em;
   border: none;
   border-radius: 0.375rem;
   margin-top: 1em;
@@ -76,6 +76,6 @@ h1 {
 @media screen and (min-width: 769px) {
   .page-wrapper {
     max-width: 1000px;
-    padding: 0;
+    padding: 2em 2.75em 2em 0;
   }
 }

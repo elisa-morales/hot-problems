@@ -9,7 +9,7 @@ p {
 }
 
 .content {
-  max-width: 400px;
+  max-width: 600px;
   background-color: var(--light);
   border-radius: 0.5rem;
   box-shadow: var(--shadow);

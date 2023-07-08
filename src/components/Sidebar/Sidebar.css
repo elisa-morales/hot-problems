@@ -17,9 +17,9 @@ aside {
 }
 
 .menu-container a {
-  display: block;
   color: var(--light);
   font-weight: 600;
+  display: block;
   margin: 1.5em;
 }
 
@@ -52,5 +52,9 @@ aside {
   aside,
   .btn-container {
     position: fixed;
+  }
+
+  .btn-container button {
+    margin: 1.25em;
   }
 }
