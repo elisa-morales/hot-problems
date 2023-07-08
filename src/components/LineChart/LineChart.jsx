@@ -1,8 +1,25 @@
-import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from "chart.js"
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js"
 import { Line } from "react-chartjs-2"
 import "./LineChart.css"
 
-ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend)
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+)
 
 export const options = {
   responsive: true,
@@ -35,7 +52,14 @@ const LineChart = ({ data, id }) => {
     labels: data?.map((data) => data.time || data.year || data.date),
     datasets: [
       {
-        label: id === "co2" ? "CO2" : id === "nitrous-oxide" ? "N2O" : id === "arctic" ? "Extent" : capitalizeFirstLetter(id),
+        label:
+          id === "co2"
+            ? "CO2"
+            : id === "nitrous-oxide"
+            ? "N2O"
+            : id === "arctic"
+            ? "Extent"
+            : capitalizeFirstLetter(id),
         data: data?.map((data) => data.land || data.trend || data.extent),
         fill: false,
         pointRadius: 1,

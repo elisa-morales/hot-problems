@@ -17,9 +17,23 @@ const Section = () => {
   return (
     <div className="page-wrapper">
       <Paragraph key={id} id={id} />
-      <Suspense fallback={<ClipLoader color="#DD7D3B" cssOverride={override} />}>
-        <Await resolve={data} errorElement="errore bla">
-          {(data) => <LineChart key={id} id={id} data={data.result || data.co2 || data.methane || data.nitrous || data.arcticData} />}
+      <Suspense
+        fallback={<ClipLoader color="#DD7D3B" cssOverride={override} />}
+      >
+        <Await resolve={data}>
+          {(data) => (
+            <LineChart
+              key={id}
+              id={id}
+              data={
+                data.result ||
+                data.co2 ||
+                data.methane ||
+                data.nitrous ||
+                data.arcticData
+              }
+            />
+          )}
         </Await>
       </Suspense>
     </div>

@@ -46,7 +46,7 @@ h1 {
   text-align: center;
 }
 
-.btn-error {
+.error-btn {
   background-color: var(--primary);
   color: var(--light);
   font-family: "Karla", Helvetica, Arial, sans-serif;
@@ -60,7 +60,7 @@ h1 {
   box-shadow: var(--shadow);
 }
 
-.btn-error:hover {
+.error-btn:hover {
   background-color: var(--hover);
   color: var(--primary);
 }

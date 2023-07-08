@@ -17,9 +17,9 @@ aside {
 }
 
 .menu-container a {
+  display: block;
   color: var(--light);
   font-weight: 600;
-  display: block;
   margin: 1.5em;
 }
 
