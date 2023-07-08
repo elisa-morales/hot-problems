@@ -1,5 +1,5 @@
 # Indice
-* <a href="https://github.com/elisa-morales/hot-problemss#descrizione">Descrizione</a>
+* <a href="https://github.com/elisa-morales/hot-problems#descrizione">Descrizione</a>
 * <a href="https://github.com/elisa-morales/hot-problems#tecnologie-utilizzate">Tecnologie utilizzate</a>
 * <a href="https://github.com/elisa-morales/hot-problems#link">Link</a>
 
