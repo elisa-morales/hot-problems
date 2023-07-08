@@ -6,8 +6,8 @@
 # Descrizione
 
 <i>Hot Problems</i> è una dashboard per visualizzare dati sul riscaldamento globale attraverso l'utilizzo di grafici.
-Dalla home page del sito, inclusiva di heading, risorse utili per la consultazione e contatti social, è possibile selezionare un grafico a scelta tra <b>Temperature</b>, <b>Carbon Dioxide</b> (CO2), <b>Methane</b>, <b>Nitrous Oxide</b> (NO2) e <b>Polar Ice</b>, ciascuno collocato su di una pagina dedicata. 
-Dati e link utili sul riscaldamento globale sono stati ricavati dalla piattaforma <a href="https://global-warming.org/" target="_blank">Global Warming API</a>.  
+<br>Dalla home page del sito, inclusiva di heading, risorse utili per la consultazione e contatti social, è possibile selezionare un grafico a scelta tra <b>Temperature</b>, <b>Carbon Dioxide</b> (CO2), <b>Methane</b>, <b>Nitrous Oxide</b> (NO2) e <b>Polar Ice</b>, ciascuno collocato su di una pagina dedicata. 
+<br>Dati e link utili sul riscaldamento globale sono stati ricavati dalla piattaforma <a href="https://global-warming.org/" target="_blank">Global Warming API</a>.  
 
 # Tecnologie utilizzate
 
