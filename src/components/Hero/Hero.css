@@ -1,5 +1,6 @@
 .hero-container {
   display: grid;
+  justify-content: center;
   margin-top: 1em;
   gap: 2em;
 }
