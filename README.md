@@ -23,12 +23,20 @@
 
 # Setup
 
-Per prima cosa, hai bisogno di installare [Node.js](https://nodejs.org/it/download).
+Per prima cosa, hai bisogno di aver installato [Node.js](https://nodejs.org/it/download). A questo punto esegui i seguenti passaggi nel tuo terminale:
 
 ```
+# clona la repository 
 $ git clone https://github.com/elisa-morales/hot-problems
+
+# spostati all'interno della repository
+$ cd hot-problems
+
+# installa le dipendenze
 $ npm install
-$ npm start
+
+# avvia l'applicazione
+$ npm run dev
 ```
 
 # Link
