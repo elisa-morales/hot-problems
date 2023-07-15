@@ -1,6 +1,7 @@
 # Indice
 * <a href="https://github.com/elisa-morales/hot-problems#descrizione">Descrizione</a>
 * <a href="https://github.com/elisa-morales/hot-problems#tecnologie-utilizzate">Tecnologie utilizzate</a>
+* <a href="https://github.com/elisa-morales/hot-problems#setup">Setup</a>
 * <a href="https://github.com/elisa-morales/hot-problems#link">Link</a>
 
 # Descrizione
@@ -19,6 +20,14 @@
 * [Framer Motion](https://www.framer.com/motion/)
 * [Axios](https://axios-http.com/)
 * [Vite](https://vitejs.dev/)
+
+# Setup
+
+```
+$ cd ../lorem
+$ npm install
+$ npm start
+```
 
 # Link
 
