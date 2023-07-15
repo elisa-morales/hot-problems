@@ -26,7 +26,7 @@
 Per prima cosa, hai bisogno di installare [Node.js](https://nodejs.org/it/download).
 
 ```
-$ git clone 
+$ git clone https://github.com/elisa-morales/hot-problems
 $ npm install
 $ npm start
 ```
