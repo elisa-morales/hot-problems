@@ -23,8 +23,10 @@
 
 # Setup
 
+Per prima cosa, hai bisogno di installare [Node.js](https://nodejs.org/it/download).
+
 ```
-$ cd ../lorem
+$ git clone 
 $ npm install
 $ npm start
 ```
