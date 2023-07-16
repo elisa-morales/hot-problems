@@ -1,8 +1,8 @@
-import "./Resources.css"
+import styles from "./Resources.module.css"
 
 const Resources = () => {
   return (
-    <div className="resources content">
+    <div className={styles.resources}>
       <h2>Resources</h2>
       <ul>
         <li>

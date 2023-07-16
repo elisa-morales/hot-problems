@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../Sidebar/Sidebar"
-import "./Layout.css"
+import styles from "./Layout.module.css"
 
 const Layout = () => {
   return (
-    <div className="dashboard">
+    <div className={styles.dashboard}>
       <Sidebar />
       <Outlet />
     </div>

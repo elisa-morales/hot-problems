@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { NavLink } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 import useOutsideClick from "../../hooks/useOutsideClick"
-import "./Sidebar.css"
+import styles from "./Sidebar.module.css"
 
 const links = [
   { name: "Home", url: "/", id: 1 },
@@ -48,7 +48,7 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="sidebar" ref={ref}>
+      <div className={styles.sidebar} ref={ref}>
         <AnimatePresence>
           {open && (
             <motion.aside
@@ -60,7 +60,7 @@ const Sidebar = () => {
               }}
             >
               <motion.div
-                className="menu-container"
+                className={styles.menu}
                 initial="closed"
                 animate="open"
                 exit="closed"
@@ -79,12 +79,12 @@ const Sidebar = () => {
             </motion.aside>
           )}
         </AnimatePresence>
-        <div className="btn-container">
+        <div className={styles.btnWrapper}>
           <button onClick={() => setOpen(!open)}>
             {open ? (
-              <i className="bx bx-x"></i>
+              <i className={`${styles.icons} bx bx-x`}></i>
             ) : (
-              <i className="bx bx-menu"></i>
+              <i className={`${styles.icons} bx bx-menu`}></i>
             )}
           </button>
         </div>

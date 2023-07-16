@@ -1,10 +1,10 @@
-import "./Credits.css"
+import styles from "./Credits.module.css"
 
 const Credits = () => {
   return (
-    <div className="credits">
+    <div className={styles.credits}>
       <h2>Credits</h2>
-      <div className="social">
+      <div className={styles.social}>
         <p>&#169; Elisa Morales</p>
         <a
           href="https://www.linkedin.com/in/elisa-morales-dev/"

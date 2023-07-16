@@ -9,7 +9,7 @@ import {
   Legend,
 } from "chart.js"
 import { Line } from "react-chartjs-2"
-import "./LineChart.css"
+import styles from "./LineChart.module.css"
 
 ChartJS.register(
   CategoryScale,
@@ -67,7 +67,7 @@ const LineChart = ({ data, id }) => {
       },
     ],
   }
-  return <Line className="chart" options={options} data={dataGraph} />
+  return <Line className={styles.chart} options={options} data={dataGraph} />
 }
 
 export default LineChart

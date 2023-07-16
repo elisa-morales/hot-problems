@@ -1,11 +1,11 @@
 import Resources from "../Resources/Resources"
 import Credits from "../Credits/Credits"
-import "./Hero.css"
+import styles from "./Hero.module.css"
 
 const Hero = () => {
   return (
-    <div className="hero-container">
-      <div className="heading content">
+    <div className={styles.container}>
+      <div className={styles.heading}>
         <h2>
           Girls are hot.
           <br />
@@ -16,7 +16,7 @@ const Hero = () => {
         <br />
         <h2>🔥 Global warming 🔥</h2>
       </div>
-      <div className="subheading content">
+      <div className={styles.subheading}>
         <p>
           The <span>current global warming rate is not natural</span>. From 1880
           to 1981 was (0.07°C / 0.13°F) per decade. Since 1981 this rate has{" "}

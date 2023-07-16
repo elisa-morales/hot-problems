@@ -9,21 +9,21 @@ aside {
   background-color: var(--primary);
 }
 
-.menu-container {
+.menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 5em 1.4em;
 }
 
-.menu-container a {
+.menu a {
   color: var(--light);
   font-weight: 600;
   display: block;
   margin: 1.5em;
 }
 
-.btn-container button {
+.btnWrapper button {
   display: flex;
   align-items: center;
   margin: 1.25em 0.5em;
@@ -37,8 +37,7 @@ aside {
   cursor: pointer;
 }
 
-.bx-x,
-.bx-menu {
+.icons {
   font-size: 1.5rem;
   transition: all 1s ease-out;
 }
@@ -50,11 +49,11 @@ aside {
   }
 
   aside,
-  .btn-container {
+  .btnWrapper {
     position: fixed;
   }
 
-  .btn-container button {
+  .btnWrapper button {
     margin: 1.25em;
   }
 }

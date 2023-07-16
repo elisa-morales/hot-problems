@@ -26,7 +26,3 @@
 .credits a:hover {
   color: var(--primary);
 }
-
-.credits .bx {
-  font-size: 1.2rem;
-}
