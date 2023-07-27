@@ -16,7 +16,7 @@
 * [React.js](https://react.dev/)
 * [React Router](https://reactrouter.com/en/main)
 * [React Spinners](https://www.npmjs.com/package/react-spinners)
-* [Chart.js](https://www.chartjs.org/)
+* [react-chartjs-2](https://www.npmjs.com/package/react-chartjs-2)
 * [Framer Motion](https://www.framer.com/motion/)
 * [Axios](https://axios-http.com/)
 * [Vite](https://vitejs.dev/)
