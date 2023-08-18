@@ -1,5 +1,6 @@
-import { useRef, useState } from "react"
-import { NavLink } from "react-router-dom"
+import React from "react"
+import { useEffect, useRef, useState } from "react"
+import { NavLink, useLocation } from "react-router-dom"
 import { AnimatePresence, motion } from "framer-motion"
 import useOutsideClick from "../../hooks/useOutsideClick"
 import styles from "./Sidebar.module.css"
@@ -39,12 +40,19 @@ const Sidebar = () => {
   const defaultValue = window.innerWidth > 768 ? true : false
   const [open, setOpen] = useState(defaultValue)
   const ref = useRef()
+  const location = useLocation()
 
   useOutsideClick(ref, () => {
     if (window.innerWidth < 769) {
       setOpen(false)
     }
   })
+
+  useEffect(() => {
+    if (window.innerWidth < 769) {
+      setOpen(false)
+    }
+  }, [location.pathname])
 
   return (
     <>
